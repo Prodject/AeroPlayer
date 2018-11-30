@@ -1,0 +1,9 @@
+@keyframes moveList {
+    from {
+        top: 10px
+    }
+
+    to {
+        top: 380px
+    }
+}
