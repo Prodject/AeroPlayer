@@ -2,7 +2,7 @@
  * @Author: zcib.rainsilver 
  * @Date: 2018-11-27 16:55:48 
  * @Last Modified by: zcib.rainsilver
- * @Last Modified time: 2018-11-30 00:29:49
+ * @Last Modified time: 2018-12-10 10:09:27
  */
 /****************成员列表***********************/
 var i = 3;
@@ -84,18 +84,25 @@ function addSong(x) {
 //播放外链歌曲
 function playURL(){
     
-    var loc = prompt("请输入你的外链地址");
-    var title = prompt("请输入你的歌曲名"); 
-    document.getElementById("title_name").innerHTML = title;
-    document.getElementById("album").style.background = "url(image/origin.jpg)";
-    document.getElementById("album").style.backgroundSize = "100% 100%";
-    var newSong = document.createElement("input");
-    newSong.className = "list_block_local";
-    newSong.value = title;
-    newSong.type = "button";
-    document.getElementById("rui_list").appendChild(newSong);
-    list_fun(1);
-    document.getElementById("play_music").src = loc;
+    var loc = prompt("请输入你的外链地址(Input your URL)");
+    if(loc != null){
+        var title = prompt("请输入你的歌曲名(Input your song name");
+        if(title != null) {
+            document.getElementById("title_name").innerHTML = title;
+            document.getElementById("album").style.background = "url(image/origin.jpg)";
+            document.getElementById("album").style.backgroundSize = "100% 100%";
+            var newSong = document.createElement("input");
+            newSong.className = "list_block_local";
+            newSong.value = title;
+            newSong.type = "button";
+            document.getElementById("rui_list").appendChild(newSong);
+            list_fun(1);
+            document.getElementById("play_music").src = loc;
+        }
+       
+    }
+
+  
     
     
 
