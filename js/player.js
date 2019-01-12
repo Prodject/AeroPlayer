@@ -8,7 +8,10 @@
 var i = 3;
 var flag = 0;
 var one = 1;
+var music = document.querySelector("#play_music");
+
 list_fun(0); //绑定块的单击事件
+catchKeyDown(); //监听快捷键
 /****************方法列表***********************/
 //列表通用指令
 function list_fun(flag) {
@@ -61,7 +64,7 @@ function rotate() {
 }
 /*更换歌曲*/
 
-function changeMusic(songName ,songSign) {
+function changeMusic(songName, songSign) {
 
     flag = 0;
 
@@ -82,12 +85,12 @@ function addSong(x) {
 
 }
 //播放外链歌曲
-function playURL(){
-    
+function playURL() {
+
     var loc = prompt("请输入你的外链地址(Input your URL)");
-    if(loc != null){
+    if (loc != null) {
         var title = prompt("请输入你的歌曲名(Input your song name");
-        if(title != null) {
+        if (title != null) {
             document.getElementById("title_name").innerHTML = title;
             document.getElementById("album").style.background = "url(image/origin.jpg)";
             document.getElementById("album").style.backgroundSize = "100% 100%";
@@ -99,16 +102,8 @@ function playURL(){
             list_fun(1);
             document.getElementById("play_music").src = loc;
         }
-       
+
     }
-
-  
-    
-    
-
-    
-   
-
 }
 // /*本地音乐播放*/
 // function getinputFile() {
@@ -119,3 +114,26 @@ function playURL(){
 //     document.getElementById("play_muisc").src = "url("+loc+")";
 //     alert(newStr);
 // }
+//键盘快捷键
+function catchKeyDown() {
+    document.body.onkeydown = function (e) {
+        var keynum;
+        var keychar;
+        keynum = window.event ? e.keyCode : e.which;
+        //将键盘码转化为对应的字符
+        keychar = String.fromCharCode(keynum);
+        if(keychar == "S"){
+            if(music != null){                
+                if(music.paused){
+                    music.play();
+                }else{
+                    music.pause();
+                }
+            }
+
+        }
+        //alert(keynum + ":" + keychar);
+
+    }
+
+}

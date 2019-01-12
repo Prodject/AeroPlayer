@@ -10,12 +10,14 @@
     <link rel="stylesheet" type="text/css" href="css/animation.css"/>
     <title>RPlayer</title>
 
+
 </head>
 
 <body>
     <!-- <input id="inputFile" type="file" value="" accept="audio/*"/>
     <input type="button" value="播放本地" onclick="getinputFile"/> -->
-    <input type="button" value="播放外链(Boardcast URL)" onclick="playURL()"/>
+    <input type="button" value="播放外链" onclick="playURL()"/><br/>
+    <input type="button" value="随机渐变色" onclick="randomUI()"/>
     <div id="rui">
         <div id="rui_box">
             <p id="title_name" align="center">---</p>
@@ -24,11 +26,10 @@
                     <div id="album_needle"></div>
                 </div>
             </div>
-            <audio id="play_music" src="_" controls="controls" onplay="songPlay()" onpause="songPause()">你的浏览器不支持该标签</audio>
+            <audio id="play_music" src="_" controls="controls" onplay="songPlay()" onpause="songPause()">你的浏览器不支持播放</audio>
         </div>
         <div id="rui_list">
-            <input class="list_block" type="button" value="栗先达-觅香" name="song1" onclick="changeMusic(this.value, this.name)" />
-            <input class="list_block" type="button" value="Talor Swift-You Belong With Me" name="song2" onclick="changeMusic(this.value, this.name)" />
+            <input class="list_block" type="button" value="Taylor Swift-You Belong With Me" name="song2" onclick="changeMusic(this.value, this.name)" />
             <input class="list_block" type="button" value="伍伍慧-风待の" name="song3" onclick="changeMusic(this.value, this.name)" />
         </div>
     </div>
