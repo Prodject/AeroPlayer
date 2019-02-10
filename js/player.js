@@ -1,9 +1,12 @@
-/*
- * @Author: zcib.rainsilver 
- * @Date: 2018-11-27 16:55:48 
- * @Last Modified by: zcib.rainsilver
- * @Last Modified time: 2018-12-10 10:09:27
+/**
+ * @author RainSilver
+ * @email ppstream123@126.com
+ * @create date 2019-11-27 19:36:37
+ * @modify date 2019-02-10 19:36:59
+ * @desc Controling player actions.
  */
+
+
 /****************成员列表***********************/
 var i = 3;
 var flag = 0;
@@ -132,7 +135,6 @@ function catchKeyDown() {
             }
 
         }
-        //alert(keynum + ":" + keychar);
 
     }
 

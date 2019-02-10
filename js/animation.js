@@ -3,7 +3,7 @@
 document.getElementById("rui_box").onmouseover = function(){
     var x =  document.getElementById("rui_list");
     x.style.display = "block";
-    x.style.animation = "moveList 1s";
+    x.style.animation = "moveList 1.5s";
     x.style.animationIterationCount = 1;
     x.style.top = "380px"
 };
