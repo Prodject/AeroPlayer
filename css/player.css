@@ -1,6 +1,6 @@
 #rui {
-    position: relative;
-    margin: 0 auto;
+    position: relative; 
+    margin: 10px auto;
     height: 780px;
     width: 300px;
     border: 1px dotted black;

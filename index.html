@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="css/reset.css" />
     <link rel="stylesheet" type="text/css" href="css/player.css" />
-    <link rel="stylesheet" type="text/css" href="css/animation.css"/>
+    <link rel="stylesheet" type="text/css" href="css/animation.css" />
     <title>RPlayer</title>
 
 
@@ -16,8 +16,22 @@
 <body>
     <!-- <input id="inputFile" type="file" value="" accept="audio/*"/>
     <input type="button" value="播放本地" onclick="getinputFile"/> -->
-    <input type="button" value="播放外链" onclick="playURL()"/><br/>
-    <input type="button" value="随机渐变色" onclick="randomUI()"/>
+    <ul class="control_tablet">
+        <li>🎵RPlayer</li>
+        <!-- <hr> -->
+        <li onclick="playURL()"> 播放外链
+        </li>
+        <li onclick="randomUI()">随机渐变色背景
+        </li>
+        <li onclick="alert('S-暂停/恢复播放')">快捷键提示</li>
+        <li onclick="alert('Powered By RainSilver')">关于</li>
+    </ul>
+
+
+
+
+
+
     <div id="rui">
         <div id="rui_box">
             <p id="title_name" align="center">---</p>
