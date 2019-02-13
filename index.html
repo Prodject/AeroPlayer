@@ -40,11 +40,11 @@
                     <div id="album_needle"></div>
                 </div>
             </div>
-            <audio id="play_music" src="_" controls="controls" onplay="songPlay()" onpause="songPause()">你的浏览器不支持播放</audio>
+            <audio id="play_music" src="_" controls="controls" onplay="songPlay()" onpause="songPause()">你的浏览器不支持Audio标签</audio>
         </div>
         <div id="rui_list">
-            <input class="list_block" type="button" value="Taylor Swift-You Belong With Me" name="song2" onclick="changeMusic(this.value, this.name)" />
-            <input class="list_block" type="button" value="伍伍慧-风待の" name="song3" onclick="changeMusic(this.value, this.name)" />
+            <input class="list_block" music_url="audio/song2.mp3" album_url="image/song2.jpg" type="button" value="Taylor Swift-You Belong With Me" name="song2"  />
+            <input class="list_block" music_url="audio/song3.mp3" album_url="image/song3.jpg" type="button" value="伍伍慧-风待の" name="song3"  />
         </div>
     </div>
     <script type="text/javascript" src="js/master.js"></script>
