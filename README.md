@@ -1,5 +1,5 @@
-# RPlayer
-功能丰富、精美小巧的HTML5播放器
+# AeroPlayer
+Aero风格、精美小巧的HTML5音乐播放器
 
 ## 界面
 
@@ -7,7 +7,7 @@
 
 ## 特性
 * 外链播放
-* 渐变色主题切换
+* 渐变色主题/插画风格切换
 * 丰富的快捷键操作
     * S：播放/ 暂停
 ## 兼容性
@@ -86,3 +86,10 @@ Github [https://github.com/RainSilver/rplayer](https://github.com/RainSilver/rpl
 
 ## 使用协议
 Apache Licence 2.0
+
+## 鸣谢
+### 插画资源
+|编号|作品名|来源|
+|--|--|--|
+|01|「梅雨」|ne-on@お仕事募集中|
+> from pixiv.com 如侵删

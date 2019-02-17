@@ -2,7 +2,7 @@
  * @author RainSilver
  * @email ppstream123@126.com
  * @create date 2019-02-13 18:54:57
- * @modify date 2019-02-13 18:54:57
+ * @modify date 2019-02-17 12:00:26
  * @desc Animation of player and website.
  */
 
@@ -18,7 +18,14 @@ function list_slideOut() {
         x.style.animation = "moveList 1.5s";
         x.style.animationIterationCount = 1;
         x.style.top = "380px"
+        // var y =  document.getElementById("rui_list-bg");
+        // y.style.display = "block";
+        // y.style.animation = "moveList 1s";
+        // y.style.animationIterationCount = 1;
+        // y.style.top = "380px"
     };
+
+
     
     
 

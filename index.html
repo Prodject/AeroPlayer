@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="css/reset.css" />
     <link rel="stylesheet" type="text/css" href="css/player.css" />
     <link rel="stylesheet" type="text/css" href="css/animation.css" />
-    <title>RPlayer</title>
+    <title>AeroPlayer</title>
 
 
 </head>
@@ -17,12 +17,15 @@
     <!-- <input id="inputFile" type="file" value="" accept="audio/*"/>
     <input type="button" value="播放本地" onclick="getinputFile"/> -->
     <ul class="control_tablet">
-        <li>🎵RPlayer</li>
+        <li>🍦AeroPlayer</li>
         <!-- <hr> -->
-        <li onclick="playURL()"> 播放外链
+        <li onclick="playURL()"> ▶播放外链
         </li>
-        <li onclick="randomUI()">随机渐变色背景
+        <li onclick="randomPicBg()">插画背景
         </li>
+        <li onclick="randomGraBg()">渐变色背景
+        </li>
+   
         <li onclick="alert('S-暂停/恢复播放')">快捷键提示</li>
         <li onclick="alert('Powered By RainSilver')">关于</li>
     </ul>
@@ -33,6 +36,7 @@
 
 
     <div id="rui">
+        <div id="rui_box-bg"></div>
         <div id="rui_box">
             <p id="title_name" align="center">---</p>
             <div id="album">
@@ -42,11 +46,15 @@
             </div>
             <audio id="play_music" src="_" controls="controls" onplay="songPlay()" onpause="songPause()">你的浏览器不支持Audio标签</audio>
         </div>
+        <div id="rui_list-bg">
+            
+        </div>
         <div id="rui_list">
             <input class="list_block" music_url="audio/song2.mp3" album_url="image/song2.jpg" type="button" value="Taylor Swift-You Belong With Me" name="song2"  />
             <input class="list_block" music_url="audio/song3.mp3" album_url="image/song3.jpg" type="button" value="伍伍慧-风待の" name="song3"  />
         </div>
-    </div>
+      
+    </div> 
     <script type="text/javascript" src="js/master.js"></script>
     <script type="text/javascript" src="js/player.js"></script>
     <script type="text/javascript" src="js/animation.js"></script>

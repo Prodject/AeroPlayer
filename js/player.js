@@ -2,7 +2,7 @@
  * @author RainSilver
  * @email ppstream123@126.com
  * @create date 2019-11-27 19:36:37
- * @modify date 2019-02-13 17:14:52
+ * @modify date 2019-02-17 12:00:24
  * @desc Controling player actions.
  */
 
@@ -12,13 +12,17 @@ var i = 3;
 var flag = 0;
 var one = 1;
 var music = document.querySelector("#play_music");
+var browser_info = -1;
 //正在播放信息
 var currentMusic = "";
 var currentTitle = "";
-var currentAlbum = ""; 
+var currentAlbum = "";
 
+catchBrowser(); //检测浏览器
 list_fun(0); //绑定块的单击事件
 catchKeyDown(); //监听快捷键
+preLoading();
+
 /****************方法列表***********************/
 //列表通用指令
 function list_fun(flag) {
@@ -40,7 +44,7 @@ function list_fun(flag) {
     }
 }
 //播放列表中的音乐
-function list_play(){
+function list_play() {
     flag = 0;
     var music = this.music_url;
     var music = this.getAttribute("music_url");
@@ -50,7 +54,7 @@ function list_play(){
     document.querySelector("#title_name").innerHTML = title;
     document.querySelector("#play_music").src = music;
     var albumDiv = document.querySelector("#album");
-    albumDiv.style.background = "URL("+ album + ")";
+    albumDiv.style.background = "URL(" + album + ")";
     albumDiv.style.backgroundSize = "100% 100%";
     // console.log(music);
     // console.log(album);
@@ -108,7 +112,7 @@ function rotate() {
 //     currentMusic = songName;
 //     currentSrc = musicSrc;
 //     currentAlbum = albumSrc;
-    
+
 // }
 
 
@@ -151,30 +155,49 @@ function playURL() {
 // }
 //键盘快捷键
 function catchKeyDown() {
+ 
     document.body.onkeydown = function (e) {
         var keynum;
         var keychar;
         keynum = window.event ? e.keyCode : e.which;
         //将键盘码转化为对应的字符
+        //alert(keynum);
         keychar = String.fromCharCode(keynum);
-        if(keychar == "S"){
-            if(music != null){                
-                if(music.paused){
+        if (keychar == "S") {
+            if (music != null) {
+                if (music.paused) {
                     music.play();
-                }else{
+                } else {
                     music.pause();
                 }
             }
-        }else if(keychar == "D"){
+        } else if (keychar == "D") {
             var x = document.querySelector("#rui_list").children;
             // var src = currentMusic;
             // var src = document.querySelector("#play_music");
-            
-
-            // alert(x.length);
+            alert(x.length);
 
         }
-
     }
 
 }
+
+function catchBrowser() {
+    //判断浏览器类型
+    if ((!!window.ActiveXObject || "ActiveXObject" in window)) {
+        browser_info = 0;
+    }
+    if (navigator.userAgent.indexOf("Firefox") != -1) {
+        browser_info = 1;
+    }
+    if (navigator.userAgent.indexOf("Chrome") != -1) {
+        browser_info = 2;
+    }
+    if (navigator.userAgent.indexOf("Safari") != -1) {
+        browser_info = 3;
+    }
+}
+function preLoading() {
+    document.querySelectorAll(".list_block")[0].click(); //模拟点击块
+
+  }

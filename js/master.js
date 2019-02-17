@@ -2,14 +2,22 @@
  * @author RainSilver
  * @email ppstream123@126.com
  * @create date 2018-11-10 19:35:39
- * @modify date 2019-02-10 19:35:39
+ * @modify date 2019-02-17 12:00:28
  * @desc Main script for index.
+ */
+/**
+ * 执行区
+ *  
  */
 
 
-
-
-function randomUI(){
+ /**
+  * 变量区  
+  */
+/**
+ * 函数区
+ */
+function randomGraBg(){
     //产生随机数并取整
     var x = Math.floor(Math.random()*16777215).toString(16); 
     var y =  Math.floor(Math.random()*16777215).toString(16); 
@@ -20,7 +28,11 @@ function randomUI(){
     document.body.style.background = "linear-gradient(to left, "+fromColor+", "+toColor+")";
 
 }
+function randomPicBg(){
+    document.body.style.background = "url('../image/hardrain.jpg') no-repeat";
+    document.body.style.backgroundSize = "100%";
 
+}
 
 
 

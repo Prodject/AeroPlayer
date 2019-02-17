@@ -3,12 +3,10 @@
     margin: 10px auto;
     height: 780px;
     width: 300px;
-    border: 1px dotted black;
+    border: 0.5px dotted black;
     border-radius: 3px;
     background-color: transparent;
-
 }
-
 #rui_box {
     position: absolute;
     left:25px;
@@ -16,12 +14,20 @@
     border-radius: 8px;
     height: 350px;
     width: 250px;
-    background: rgba(255, 255, 255, 0.5);
-    box-shadow: 2px 2px 10px gray;
     position: relative;
 
 }
+#rui_box-bg {
+    position: absolute;
+    left:25px;
+    top:10px;
+    border-radius: 8px;
+    height: 350px;
+    width: 250px;
+    background-color: rgba(255 , 255, 255, 0.5);
+    filter: blur(5px);
 
+}
 #ruibox #title {
     margin-left: 15px;
     border: 1px solid red;
@@ -82,10 +88,25 @@
     width: 10px;
     border-radius: 50%;
     background-color: white;
+
 }
-
-
+#rui_box,#rui_list{
+    box-shadow: 2px 2px 20px black;
+    
+}
 #rui_list {
+    display: none;
+    position: absolute;
+    left:25px;
+    top:10px;
+    border-radius: 8px; 
+    height: 350px;
+    width: 250px;
+    overflow: auto;
+    background: rgba(255, 255, 255, 0.2);
+
+}
+/* #rui_list-bg {
     display: none;
     position: absolute;
     left:25px;
@@ -93,10 +114,7 @@
     border-radius: 8px;
     height: 350px;
     width: 250px;
-    background: rgba(255, 255, 255, 0.5);
-    box-shadow: 2px 2px 10px gray;
-    overflow: auto;
-}
+} */
 
 #rui_list h3 {
     color: black;
@@ -121,6 +139,7 @@
 
 
 }
+
 .list_block:hover
 {
     border-color:#38f;
