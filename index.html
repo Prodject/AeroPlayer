@@ -25,9 +25,10 @@
         </li>
         <li onclick="randomGraBg()">渐变色背景
         </li>
-   
-        <li onclick="alert('S-暂停/恢复播放')">快捷键提示</li>
+        
+        <li onclick="alert('S-暂停/恢复播放 A-上一首 D-下一首')">快捷键提示</li>
         <li onclick="alert('Powered By RainSilver')">关于</li>
+        
     </ul>
 
 
@@ -50,9 +51,13 @@
             
         </div>
         <div id="rui_list">
-            <input class="list_block" music_url="audio/song2.mp3" album_url="image/song2.jpg" type="button" value="Taylor Swift-You Belong With Me" name="song2"  />
-            <input class="list_block" music_url="audio/song3.mp3" album_url="image/song3.jpg" type="button" value="伍伍慧-风待の" name="song3"  />
+            <input class="list_block" music_url="audio/song2.mp3" album_url="image/song2.jpg" on_play="no" type="button" value="Taylor Swift-You Belong With Me" name="song2"  />
+
+            <input class="list_block" music_url="audio/song3.mp3" album_url="image/song3.jpg" on_play="no" type="button" value="伍伍慧-风待の" name="song3"  />
+            <input class="list_block" music_url="audio/song4.mp3" album_url="image/song4.jpg" on_play="no" type="button" value="GONTITI-步履不停" name="song3"  />
+
         </div>
+        
       
     </div> 
     <script type="text/javascript" src="js/master.js"></script>

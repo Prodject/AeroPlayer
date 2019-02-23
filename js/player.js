@@ -45,12 +45,18 @@ function list_fun(flag) {
 }
 //播放列表中的音乐
 function list_play() {
+    clearPlaying();
+
     flag = 0;
     var music = this.music_url;
     var music = this.getAttribute("music_url");
     var album = this.album_url; // for IE
     var album = this.getAttribute("album_url"); // for Chrome/Fixfox
     var title = this.value;
+    this.on_play = "yes";
+    this.setAttribute("on_play", "yes");
+    //other set
+    currentTitle = this.value;
     document.querySelector("#title_name").innerHTML = title;
     document.querySelector("#play_music").src = music;
     var albumDiv = document.querySelector("#album");
@@ -59,6 +65,49 @@ function list_play() {
     // console.log(music);
     // console.log(album);
     // console.log(title);
+}
+//列表-清除状态
+function clearPlaying() {
+    var x = document.querySelectorAll(".list_block");
+    for (let index = 0; index < x.length; index++) {
+
+      x[index].on_play = "no";
+      x[index].setAttribute("on_play", "no"); //chrome and firefox
+
+
+    }
+
+
+}
+//列表-下一首上一首
+function nextSong() {
+    var x = document.querySelectorAll(".list_block");
+    for (let index = 0; index < x.length; index++) {
+
+        if(x[index].on_play == "yes" || x[index].getAttribute("on_play") == "yes"){
+             
+            x[index+1].click();
+            x[index+1].list_play();
+
+            
+
+            
+        }
+    }
+
+}
+//列表-下一首上一首
+function preSong() {
+    var x = document.querySelectorAll(".list_block");
+    for (let index = 0; index < x.length; index++) {
+
+        if(x[index].on_play == "yes" && index-1 != -1){
+            x[index-1].click();
+            x[index-1].list_play();
+
+        }
+    }
+
 }
 //列表-更改颜色
 function changeColor() {
@@ -155,7 +204,7 @@ function playURL() {
 // }
 //键盘快捷键
 function catchKeyDown() {
- 
+
     document.body.onkeydown = function (e) {
         var keynum;
         var keychar;
@@ -172,10 +221,11 @@ function catchKeyDown() {
                 }
             }
         } else if (keychar == "D") {
-            var x = document.querySelector("#rui_list").children;
-            // var src = currentMusic;
-            // var src = document.querySelector("#play_music");
-            alert(x.length);
+ 
+            nextSong();
+
+        }else if(keychar == "A"){
+            preSong();
 
         }
     }
@@ -197,7 +247,8 @@ function catchBrowser() {
         browser_info = 3;
     }
 }
+
 function preLoading() {
     document.querySelectorAll(".list_block")[0].click(); //模拟点击块
 
-  }
+}
