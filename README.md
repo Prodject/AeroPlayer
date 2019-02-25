@@ -41,11 +41,14 @@ Aero风格、精美小巧的HTML5音乐播放器
   list_fun(1);
   this.style = "color:white;background-color:#38f;";
   ```
-
+- clearPlaying()
+  描述：清除播放列表的“播放中”标志
 - playURL()
-
   描述：根据用户给定的地址和歌曲名添加音乐到播放列表中
-
+- preSong()
+    描述：遍历播放列表并根据播放中的音乐切换焦点到下一首
+- nextSong()
+    描述：描述：遍历播放列表并根据播放中的音乐切换焦点到下一首
 #### 2、音乐控件
 
 * songPlay()
