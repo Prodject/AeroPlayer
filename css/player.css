@@ -168,3 +168,27 @@
     background-color:gray;
     
 }
+
+
+#test_area{
+    position: fixed;
+    top:0px;
+    left: 230px;
+    width: 250px;
+    height: 300px;
+    background: rgba(125,125,125,.7);
+
+}
+#rui-progress_bar_outline{
+    width: 200px;
+    height:30px;
+
+    background-color: #cccccc;
+}
+#rui-progress_bar_inline{
+
+    height: 20px;
+    background-color: #38f;
+
+}
+

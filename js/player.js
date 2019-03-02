@@ -22,6 +22,9 @@ catchBrowser(); //检测浏览器
 list_fun(0); //绑定块的单击事件
 catchKeyDown(); //监听快捷键
 preLoading();
+/*循环使用函数 */
+setInterval( setProgressBar, 1000);
+
 
 /****************方法列表***********************/
 //列表通用指令
@@ -252,3 +255,24 @@ function preLoading() {
     document.querySelectorAll(".list_block")[0].click(); //模拟点击块
 
 }
+/*监听播放器*/
+//获取播放时间
+function setProgressBar(){
+    var player = document.querySelector("#play_music");
+    var time = player.currentTime;
+    var fullTime = player.duration;
+
+
+    document.querySelector("#fullTime").innerHTML = fullTime;
+    document.querySelector("#nowTime").innerHTML = time;
+    var rate = time / fullTime;
+    var wid = rate * 200;
+    // console.log(rate);
+    // console.log(wid);
+
+
+    document.querySelector("#rui-progress_bar_inline").style.width = wid + "px";
+
+    console.log(time);
+}
+

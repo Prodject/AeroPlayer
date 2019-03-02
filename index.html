@@ -11,9 +11,13 @@
     <title>AeroPlayer</title>
 
 
+
+
+
 </head>
 
 <body>
+
     <!-- <input id="inputFile" type="file" value="" accept="audio/*"/>
     <input type="button" value="播放本地" onclick="getinputFile"/> -->
     <ul class="control_tablet">
@@ -27,13 +31,16 @@
         </li>
         
         <li onclick="alert('S-暂停/恢复播放 A-上一首 D-下一首')">快捷键提示</li>
+        <li onclick="showBackstage()">后台</li>
         <li onclick="alert('Powered By RainSilver')">关于</li>
         
     </ul>
+    <ul class="backstage">
+        正在播放/全部时间<br>
+        <span id="nowTime" ></span>/
+        <span id="fullTime"></span>
 
-
-
-
+    </ul>
 
 
     <div id="rui">
@@ -58,12 +65,23 @@
 
         </div>
         
+       
+
+        
       
-    </div> 
+    </div>
+    <ul id="test_area">
+        <li><h2>ProgressBar</h2>
+
+            <div id="rui-progress_bar_outline"><div id="rui-progress_bar_inline"></div></div>
+        </li>
+        <li>
+        </li>
+    </ul>
+
     <script type="text/javascript" src="js/master.js"></script>
     <script type="text/javascript" src="js/player.js"></script>
     <script type="text/javascript" src="js/animation.js"></script>
-
 
 </body>
 
