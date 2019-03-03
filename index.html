@@ -36,16 +36,23 @@
         
     </ul>
     <ul class="backstage">
-        正在播放/全部时间<br>
-        <span id="nowTime" ></span>/
-        <span id="fullTime"></span>
+        <li>
+            正在播放/全部时间<br>
+            <span id="nowTime" ></span>/
+            <span id="fullTime"></span>
+        </li>
+        <li>        播放列表<br>
+            <span id="has_playlist"></span>
+
+        </li>
 
     </ul>
 
-
+s
     <div id="rui">
         <div id="rui_box-bg"></div>
         <div id="rui_box">
+
             <p id="title_name" align="center">---</p>
             <div id="album">
                 <div id="album_center">
@@ -76,6 +83,15 @@
             <div id="rui-progress_bar_outline"><div id="rui-progress_bar_inline"></div></div>
         </li>
         <li>
+            <h2>ControlButton</h2>
+            <div id="rui-play_pause" onclick="control_music_playing()"></div>
+
+        </li>
+        <li>
+            <h2>ShowPlayingList</h2>
+
+            <div id="rui-show-playlist" onclick="control_show_playlist()"></div>
+
         </li>
     </ul>
 

@@ -7,26 +7,27 @@
  */
 
 //默认调用的方法
-list_slideOut();
+//list_slideOut();
 
 /*方法列表*/
 //点击封面标题弹出播放列表
-function list_slideOut() {
-    document.getElementById("rui_box").onmouseover = function(){
-        var x =  document.getElementById("rui_list");
-        x.style.display = "block";
-        x.style.animation = "moveList 1.5s";
-        x.style.animationIterationCount = 1;
-        x.style.top = "380px"
-        // var y =  document.getElementById("rui_list-bg");
-        // y.style.display = "block";
-        // y.style.animation = "moveList 1s";
-        // y.style.animationIterationCount = 1;
-        // y.style.top = "380px"
-    };
+function list_slideOut(action) {
+    if(action == "in"){
+            var x =  document.getElementById("rui_list");
+            x.style.animation = "moveListBack 1s";
+            x.style.animationIterationCount = 1;
+            x.style.top = "10px";
+            x.style.opacity = "0";
+
+    }else if(action == "out"){
+            var x =  document.getElementById("rui_list");
+            x.style.animation = "moveList 1s";
+            x.style.animationIterationCount = 1;
+            x.style.top = "380px";
+            x.style.display = "block";
+            x.style.opacity = "1";
 
 
-    
-    
 
+    }
   }

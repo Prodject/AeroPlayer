@@ -13,6 +13,8 @@ var flag = 0;
 var one = 1;
 var music = document.querySelector("#play_music");
 var browser_info = -1;
+//播放器状态
+var playlist = false;
 //正在播放信息
 var currentMusic = "";
 var currentTitle = "";
@@ -24,6 +26,8 @@ catchKeyDown(); //监听快捷键
 preLoading();
 /*循环使用函数 */
 setInterval( setProgressBar, 1000);
+setInterval(littleBird, 100);
+
 
 
 /****************方法列表***********************/
@@ -269,10 +273,34 @@ function setProgressBar(){
     var wid = rate * 200;
     // console.log(rate);
     // console.log(wid);
-
-
     document.querySelector("#rui-progress_bar_inline").style.width = wid + "px";
 
     console.log(time);
 }
+//控制播放
+function control_music_playing() {
+    var player = document.querySelector("#play_music");
+    if(player.paused == true){
+        player.play();
+    }else{
+        player.pause();
 
+    }
+
+}
+//控制列表显示
+function control_show_playlist() {
+    // var x = document.querySelector("#rui_list");
+    if(playlist == false){
+        list_slideOut("out");
+        playlist = true;
+    }else{
+        list_slideOut("in");
+        playlist = false;
+    }
+}
+//监听一切
+function  littleBird() {
+    //播放列表状态
+        document.querySelector("#has_playlist").innerHTML = playlist;
+}

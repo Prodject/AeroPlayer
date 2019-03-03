@@ -1,9 +1,24 @@
 @keyframes moveList {
     from {
-        top: 10px
+        top: 10px;
+        opacity: 0;
     }
 
     to {
-        top: 380px
+        top: 380px;
+        opacity: 1;
+    }
+}
+@keyframes moveListBack {
+    from{
+        top:380px;
+        opacity: 1;
+    }
+    to{
+        top:10px;
+        opacity: 0;
+
+
+
     }
 }

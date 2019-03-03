@@ -44,6 +44,10 @@ function randomPicBg(){
     }else{
         bs.style.display = "none";
 
+
+
+
+
     }
 
 
